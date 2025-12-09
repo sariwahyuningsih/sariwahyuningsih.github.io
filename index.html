@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumen HTML - SMA Negeri 2 Playen</title>
+    <style>
+        /* Reset dasar */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Styling dari user */
+        body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: #1a5f7a;
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPP Deep Learning: Permutasi dan Kombinasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --accent: #e74c3c;
+            --light: #f9f9f9;
+            --dark: #2c3e50;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .tagline {
+            font-style: italic;
+            font-size: 1.3rem;
+            margin-top: 15px;
+            color: #f1c40f;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0 5px 10px 5px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .card:hover {
+            background-color: #e8f4fc;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #27ae60;
+        }
+        
+        .interactive-area {
+            background-color: #f0f7ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px dashed var(--primary);
+        }
+        
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .game-card {
+            flex: 1;
+            min-width: 250px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .color-mixer {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .color-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+        }
+        
+        .color-box:hover {
+            transform: scale(1.1);
+        }
+        
+        .result-box {
+            width: 100%;
+            height: 100px;
+            border-radius: 10px;
+            margin: 20px auto;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 2px solid #ccc;
+        }
+        
+        .quiz-container {
+            margin: 20px 0;
+        }
+        
+        .quiz-question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .quiz-option {
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .quiz-option:hover {
+            background-color: #e9ecef;
+        }
+        
+        .correct {
+            background-color: #d4edda !important;
+            border-left: 5px solid var(--secondary) !important;
+        }
+        
+        .incorrect {
+            background-color: #f8d7da !important;
+            border-left: 5px solid var(--accent) !important;
+        }
+        
+        .observation-table {
+            overflow-x: auto;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--dark);
+            color: white;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .signature {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .signature-box {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .active-tab {
+            background-color: var(--primary) !important;
+            color: white !important;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            background-color: #eee;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn:hover {
+            background-color: #ddd;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background-color: white;
+            border-radius: 0 10px 10px 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .game-container {
+                flex-direction: column;
+            }
+            
+            .color-mixer {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-project-diagram"></i> RENCANA PELAKSANAAN PEMBELAJARAN</h1>
+            <div class="subtitle">Dengan Struktur Deep Learning</div>
+            <div class="tagline">"URUTKAN LANGKAHMU UNTUK MENYUSUN MIMPIMU"</div>
+            <div>
+                <span class="badge"><i class="fas fa-user"></i> Sari Wahyuningsih</span>
+                <span class="badge"><i class="fas fa-school"></i> SMA Negeri 2 Playen</span>
+                <span class="badge"><i class="fas fa-calculator"></i> Matematika</span>
+                <span class="badge"><i class="fas fa-users"></i> Kelas XII/1</span>
+            </div>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab-btn active-tab" onclick="openTab('identitas')">Identitas & Identifikasi</button>
+            <button class="tab-btn" onclick="openTab('desain')">Desain Pembelajaran</button>
+            <button class="tab-btn" onclick="openTab('pengalaman')">Pengalaman Belajar</button>
+            <button class="tab-btn" onclick="openTab('asesmen')">Asesmen & Latihan</button>
+        </div>
+        
+        <!-- Tab 1: Identitas & Identifikasi -->
+        <div id="identitas" class="tab-content active">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-id-card"></i> A. IDENTITAS</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3><i class="fas fa-user-edit"></i> Nama Penyusun</h3>
+                        <p>Sari Wahyuningsih</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-school"></i> Sekolah</h3>
+                        <p>SMA Negeri 2 Playen</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-book"></i> Mata Pelajaran</h3>
+                        <p>Matematika</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-users"></i> Kelas/Semester</h3>
+                        <p>XII/1</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-search"></i> B. IDENTIFIKASI</h2>
+                
+                <h3><i class="fas fa-user-graduate"></i> 1. Peserta Didik</h3>
+                <ul style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>Murid telah memiliki pengetahuan awal tentang Kaidah Pencacahan (Aturan Penjumlahan, Aturan Perkalian, Notasi Faktorial) pada materi sebelumnya.</li>
+                    <li>Murid memiliki pengetahuan tentang materi tentang mencampur warna pada pembelajaran Seni Rupa dan menyusun kalimat pada pelajaran Bahasa Indonesia.</li>
+                </ul>
+                
+                <h3><i class="fas fa-book-open"></i> 2. Materi Pelajaran</h3>
+                <p>Materi Permutasi dan Kombinasi mencakup kegiatan menganalisis situasi dan menghitung jumlah kemungkinan susunan atau pilihan. Melalui materi Permutasi dan Kombinasi murid tidak hanya belajar memahami definisi Permutasi dan Kombinasi, tetapi juga mengembangan kemampuan memecahkan masalah menggunakan konsep Permutasi dan Kombinasi.</p>
+                
+                <div class="interactive-area">
+                    <h4><i class="fas fa-lightbulb"></i> Uji Pengetahuan Awal</h4>
+                    <p>Pilih pernyataan yang benar tentang pengetahuan awal yang Anda miliki:</p>
+                    <div class="quiz-container">
+                        <div class="quiz-question">1. Apa yang Anda ketahui tentang faktorial?</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, 'correct')">Notasi n! = n × (n-1) × ... × 2 × 1</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Hanya berlaku untuk bilangan genap</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, 'incorrect')">Hasilnya selalu bilangan ganjil</div>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 20px;"><i class="fas fa-chart-line"></i> Dimensi Profil Lulusan</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Keimanan dan ketakwaan terhadap Tuhan YME</td>
+                            <td><i class="fas fa-check" style="color: green;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Kewargaan</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Penalaran kritis</td>
+                            <td><i class="fas fa-check" style="color: green;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Kreativitas</td>
+                            <td><i class="fas fa-check" style="color: green;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Kolaborasi</td>
+                            <td><i class="fas fa-check" style="color: green;"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Kemandirian</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Kesehatan</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Komunikasi</td>
+                            <td><i class="fas fa-check" style="color: green;"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Tab 2: Desain Pembelajaran -->
+        <div id="desain" class="tab-content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-pencil-alt"></i> C. DESAIN PEMBELAJARAN</h2>
+                
+                <h3><i class="fas fa-bullseye"></i> 1. Capaian Pembelajaran</h3>
+                <div class="card">
+                    <p><strong>6.4. Analisis Data dan Peluang</strong></p>
+                    <p>Melakukan proses penyelidikan statistika untuk mengidentifikasi dan menjelaskan asosiasi antara dua variabel kategorikal (kualitatif) dan antara dua variabel numerikal (kuantitatif); memperkirakan model linear terbaik (best fit linear) pada data numerikal (kuantitatif); membedakan hubungan asosiasi dan sebab-akibat; menjelaskan peluang dan menentukan frekuensi harapan dari kejadian majemuk; menyelidiki konsep dari kejadian saling bebas dan saling lepas, dan menentukan peluangnya; serta memahami konsep peluang bersyarat dan kejadian yang saling bebas menggunakan konsep permutasi dan kombinasi.</p>
+                </div>
+                
+                <h3><i class="fas fa-exchange-alt"></i> 2. Lintas Disiplin Ilmu</h3>
+                <div class="game-container">
+                    <div class="game-card">
+                        <h4><i class="fas fa-palette"></i> Seni Rupa</h4>
+                        <p>Untuk menjadi sumber informasi materi pencampuran warna.</p>
+                        <button class="btn btn-secondary" onclick="showColorMixer()"><i class="fas fa-play-circle"></i> Coba Pencampuran Warna</button>
+                    </div>
+                    <div class="game-card">
+                        <h4><i class="fas fa-language"></i> Bahasa Indonesia</h4>
+                        <p>Untuk menjadi sumber informasi materi menyusun kalimat.</p>
+                        <button class="btn btn-secondary" onclick="showSentenceBuilder()"><i class="fas fa-play-circle"></i> Coba Menyusun Kalimat</button>
+                    </div>
+                </div>
+                
+                <div id="color-mixer-container" class="hidden interactive-area">
+                    <h4><i class="fas fa-palette"></i> Pencampuran Warna</h4>
+                    <p>Pilih 2 warna untuk melihat hasil pencampurannya:</p>
+                    <div class="color-mixer">
+                        <div class="color-box" style="background-color: #FF0000;" onclick="selectColor(this, 'Merah')" data-color="red"></div>
+                        <div class="color-box" style="background-color: #FFFF00;" onclick="selectColor(this, 'Kuning')" data-color="yellow"></div>
+                        <div class="color-box" style="background-color: #00FF00;" onclick="selectColor(this, 'Hijau')" data-color="green"></div>
+                        <div class="color-box" style="background-color: #0000FF;" onclick="selectColor(this, 'Biru')" data-color="blue"></div>
+                        <div class="color-box" style="background-color: #8B4513;" onclick="selectColor(this, 'Coklat')" data-color="brown"></div>
+                    </div>
+                    <p>Warna yang dipilih: <span id="selected-colors">Belum ada warna yang dipilih</span></p>
+                    <div class="result-box" id="color-result">
+                        Hasil pencampuran akan muncul di sini
+                    </div>
+                    <button class="btn" onclick="mixColors()"><i class="fas fa-blender"></i> Campur Warna</button>
+                    <button class="btn" onclick="resetColors()"><i class="fas fa-redo"></i> Ulangi</button>
+                </div>
+                
+                <div id="sentence-builder-container" class="hidden interactive-area">
+                    <h4><i class="fas fa-language"></i> Penyusunan Kalimat</h4>
+                    <p>Susun kalimat dari kata-kata berikut: <strong>Mini, Miki, menyanyi, dengan</strong></p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
+                        <div class="word-box" onclick="selectWord(this)" data-word="Mini">Mini</div>
+                        <div class="word-box" onclick="selectWord(this)" data-word="Miki">Miki</div>
+                        <div class="word-box" onclick="selectWord(this)" data-word="menyanyi">menyanyi</div>
+                        <div class="word-box" onclick="selectWord(this)" data-word="dengan">dengan</div>
+                    </div>
+                    <p>Kata yang dipilih: <span id="selected-words"></span></p>
+                    <div style="margin: 20px 0;">
+                        <input type="text" id="sentence-input" placeholder="Tulis kalimat Anda di sini" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+                    </div>
+                    <button class="btn" onclick="checkSentence()"><i class="fas fa-check-circle"></i> Periksa Kalimat</button>
+                    <button class="btn" onclick="resetSentence()"><i class="fas fa-redo"></i> Ulangi</button>
+                    <div id="sentence-feedback" style="margin-top: 15px; padding: 10px; border-radius: 5px;"></div>
+                </div>
+                
+                <h3><i class="fas fa-flag-checkered"></i> 3. Tujuan Pembelajaran</h3>
+                <div class="card">
+                    <p>Murid dapat menyelesaikan masalah yang berkaitan dengan permutasi dan kombinasi.</p>
+                </div>
+                
+                <h3><i class="fas fa-brain"></i> 4. Praktik Pedagogis</h3>
+                <div class="game-container">
+                    <div class="game-card">
+                        <h4><i class="fas fa-question-circle"></i> Pembelajaran Berbasis Masalah</h4>
+                        <p>Menggunakan masalah kontekstual untuk memicu pemecahan masalah.</p>
+                    </div>
+                    <div class="game-card">
+                        <h4><i class="fas fa-comments"></i> Diskusi Kelas</h4>
+                        <p>Berinteraksi dan berkolaborasi untuk membangun pengetahuan bersama.</p>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-laptop"></i> 5. Pemanfaatan Digital</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4><i class="fas fa-search"></i> Mesin Pencari</h4>
+                        <p>Sebagai sumber informasi digital.</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="fas fa-poll"></i> Mentimeter</h4>
+                        <p>Untuk diskusi kelas interaktif.</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="fas fa-gamepad"></i> Kahoot</h4>
+                        <p>Untuk permainan edukatif.</p>
+                    </div>
+                    <div class="card">
+                        <h4><i class="fas fa-file-alt"></i> Liveworksheets</h4>
+                        <p>Untuk lembar kerja digital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab 3: Pengalaman Belajar -->
+        <div id="pengalaman" class="tab-content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> D. PENGALAMAN BELAJAR</h2>
+                
+                <h3><i class="fas fa-play-circle"></i> Langkah-Langkah Pembelajaran</h3>
+                
+                <div class="interactive-area">
+                    <h4><i class="fas fa-door-open"></i> 1. Awal Pembelajaran</h4>
+                    <ul>
+                        <li>Peserta didik mempersiapkan kelas agar lebih kondusif untuk proses belajar mengajar, kerapian dan kebersihan ruang kelas.</li>
+                        <li>Pendidik mengucapkan salam ketika masuk kelas dan mengajak peserta didik berdoa bersama sebelum memulai kegiatan pembelajaran.</li>
+                        <li>Menyiapkan peserta didik secara psikis dan fisik untuk mengikuti proses pembelajaran.</li>
+                        <li>Menyampaikan pengantar materi dan tujuan yang harus dikuasai di akhir pembelajaran.</li>
+                        <li>Memberikan motivasi kepada peserta didik agar peserta didik memiliki rasa ingin tahu dan semangat untuk belajar.</li>
+                        <li>Mengumpulkan pengalaman murid yang dapat mendukung pengetahuan awal tentang Notasi Faktorial.</li>
+                    </ul>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
+                        <button class="btn" onclick="showMotivation()"><i class="fas fa-lightbulb"></i> Lihat Contoh Motivasi Pembelajaran</button>
+                    </div>
+                    
+                    <div id="motivation-example" class="hidden" style="margin-top: 20px; padding: 15px; background-color: #fffde7; border-radius: 8px; border-left: 5px solid #f1c40f;">
+                        <h5><i class="fas fa-star"></i> Manfaat Mempelajari Permutasi & Kombinasi</h5>
+                        <p>Dalam kehidupan sehari-hari, kita sering menghadapi situasi yang memerlukan perhitungan kemungkinan:</p>
+                        <ul>
+                            <li><strong>Pengaturan jadwal:</strong> Menentukan urutan pertandingan dalam turnamen olahraga</li>
+                            <li><strong>Pengambilan keputusan:</strong> Memilih tim kerja dari beberapa kandidat</li>
+                            <li><strong>Keamanan:</strong> Menghitung kemungkinan kombinasi password</li>
+                            <li><strong>Bisnis:</strong> Menentukan variasi menu atau produk yang akan ditawarkan</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="interactive-area">
+                    <h4><i class="fas fa-cogs"></i> 2. Inti Pembelajaran</h4>
+                    
+                    <div class="tabs" style="margin-top: 10px;">
+                        <button class="tab-btn active-tab" onclick="openLearningTab('memahami')">Memahami</button>
+                        <button class="tab-btn" onclick="openLearningTab('mengaplikasi')">Mengaplikasi</button>
+                        <button class="tab-btn" onclick="openLearningTab('merefleksi')">Merefleksi</button>
+                    </div>
+                    
+                    <div id="memahami" class="learning-tab active">
+                        <h5><i class="fas fa-brain"></i> a. Memahami (Berkesadaran, Bermakna)</h5>
+                        <p>Guru menampilkan beberapa pertanyaan untuk memantik diskusi kelas:</p>
+                        <ol>
+                            <li>Buatlah campuran 2 warna beserta hasilnya dari warna berikut: merah, kuning, hijau dan biru.</li>
+                            <li>Bu Sari ingin membuat kue lapis. Di dapur ada pewarna makanan merah, kuning, hijau dan coklat. Buatlah susunan warna kue lapis 3 warna.</li>
+                            <li>Es buah prasmanan: bebas pilih 3 macam dari isi yang disediakan (buah, jeli, roti, rumput laut, cincau, selasih, cendol). Variasi es buah yang dapat dibeli...</li>
+                            <li>Buatlah kalimat menggunakan kata-kata berikut: Mini, Miki, menyanyi, dengan.</li>
+                        </ol>
+                        <p>Guru mengarahkan diskusi kelas menuju pemahaman konsep perbedaan permutasi dan kombinasi.</p>
+                        
+                        <div class="card">
+                            <h6><i class="fas fa-question-circle"></i> Diskusi Interaktif: Permutasi vs Kombinasi</h6>
+                            <p>Manakah dari situasi berikut yang merupakan <strong>permutasi</strong> dan mana yang <strong>kombinasi</strong>?</p>
+                            <div class="quiz-container">
+                                <div class="quiz-question">1. Memilih juara I, II, dan III dari 10 finalis lomba menyanyi</div>
+                                <div class="quiz-option" onclick="checkPermComAnswer(this, 'permutasi')">Permutasi</div>
+                                <div class="quiz-option" onclick="checkPermComAnswer(this, 'kombinasi')">Kombinasi</div>
+                            </div>
+                            <div class="quiz-container">
+                                <div class="quiz-question">2. Memilih 3 orang dari 6 calon untuk menjadi pengurus OSIS</div>
+                                <div class="quiz-option" onclick="checkPermComAnswer(this, 'permutasi')">Permutasi</div>
+                                <div class="quiz-option" onclick="checkPermComAnswer(this, 'kombinasi')">Kombinasi</div>
+                            </div>
+                            <div id="perm-com-feedback" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="mengaplikasi" class="learning-tab">
+                        <h5><i class="fas fa-tasks"></i> b. Mengaplikasi (Bermakna, Menggembirakan)</h5>
+                        <p>Murid dibagi dalam beberapa kelompok untuk:</p>
+                        <ul>
+                            <li>Bermain game Kahoot tentang Permutasi dan Kombinasi</li>
+                            <li>Mengerjakan Lembar Kerja: <a href="https://www.liveworksheets.com/worksheet/id/matematika/1549241" target="_blank">https://www.liveworksheets.com/worksheet/id/matematika/1549241</a></li>
+                            <li>Presentasi hasil diskusi kelompok</li>
+                            <li>Apresiasi hasil tiap kelompok oleh guru</li>
+                        </ul>
+                        
+                        <div style="text-align: center; margin: 20px 0;">
+                            <button class="btn" onclick="showKahootGame()"><i class="fas fa-gamepad"></i> Coba Game Kahoot Mini</button>
+                        </div>
+                        
+                        <div id="kahoot-game" class="hidden">
+                            <div class="card">
+                                <h6><i class="fas fa-trophy"></i> Game Kahoot: Permutasi & Kombinasi</h6>
+                                <div class="quiz-container">
+                                    <div class="quiz-question">Dari 7 orang, akan dipilih 3 orang untuk mewakili kelas dalam lomba cerdas cermat. Banyaknya cara pemilihan adalah...</div>
+                                    <div class="quiz-option" onclick="checkKahootAnswer(this, 'correct')">35 cara</div>
+                                    <div class="quiz-option" onclick="checkKahootAnswer(this, 'incorrect')">210 cara</div>
+                                    <div class="quiz-option" onclick="checkKahootAnswer(this, 'incorrect')">840 cara</div>
+                                    <div class="quiz-option" onclick="checkKahootAnswer(this, 'incorrect')">5040 cara</div>
+                                </div>
+                                <div id="kahoot-feedback" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+                                <div style="text-align: center; margin-top: 15px;">
+                                    <button class="btn" onclick="nextKahootQuestion()">Pertanyaan Selanjutnya <i class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="merefleksi" class="learning-tab">
+                        <h5><i class="fas fa-meditate"></i> c. Merefleksi (Bermakna)</h5>
+                        <p>Aktivitas refleksi pembelajaran:</p>
+                        <ul>
+                            <li>Guru bersama murid menyimpulkan bersama tentang materi Permutasi dan Kombinasi</li>
+                            <li>Murid mengerjakan latihan soal</li>
+                            <li>Murid mengungkapkan perasaannya setelah mempelajari materi</li>
+                            <li>Murid menyampaikan kendala saat mengikuti pembelajaran dan memberikan solusi</li>
+                        </ul>
+                        
+                        <div class="card">
+                            <h6><i class="fas fa-comment-dots"></i> Refleksi Pembelajaran</h6>
+                            <p>Bagaimana perasaan Anda setelah mempelajari materi Permutasi dan Kombinasi?</p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0;">
+                                <button class="btn" onclick="recordReflection('Mudah dipahami')">Mudah dipahami</button>
+                                <button class="btn" onclick="recordReflection('Menantang')">Menantang</button>
+                                <button class="btn" onclick="recordReflection('Menyenangkan')">Menyenangkan</button>
+                                <button class="btn" onclick="recordReflection('Membingungkan')">Membingungkan</button>
+                            </div>
+                            <div id="reflection-result" style="margin-top: 15px; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                                Klik salah satu tombol di atas untuk merekam refleksi Anda
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="interactive-area">
+                    <h4><i class="fas fa-flag-checkered"></i> 3. Penutup Pembelajaran</h4>
+                    <p>Guru mengakhiri pembelajaran dengan mengucapkan rasa syukur kepada Allah SWT, Tuhan YME bahwa pertemuan kali ini telah berlangsung dengan baik dan lancar.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab 4: Asesmen & Latihan -->
+        <div id="asesmen" class="tab-content">
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-clipboard-check"></i> E. ASESMEN PEMBELAJARAN</h2>
+                
+                <div class="grid">
+                    <div class="card">
+                        <h3><i class="fas fa-play-circle"></i> 1. Asesmen Awal</h3>
+                        <p>Tanya jawab untuk mengumpulkan pengalaman siswa yang dapat mendukung pengetahuan awal tentang notasi faktorial.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-cogs"></i> 2. Asesmen Proses</h3>
+                        <p>Penilaian kinerja dan observasi untuk mengetahui keaktifan dalam diskusi kelompok dan proses belajar siswa.</p>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fas fa-flag-checkered"></i> 3. Asesmen Akhir</h3>
+                        <p>Unjuk Kerja: mempresentasikan hasil diskusi kelompok dan mengerjakan latihan soal.</p>
+                    </div>
+                </div>
+                
+                <h3><i class="fas fa-clipboard-list"></i> Lembar Observasi Kegiatan Diskusi</h3>
+                <div class="observation-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Aspek yang Diamati</th>
+                                <th>Sangat Baik</th>
+                                <th>Baik</th>
+                                <th>Cukup</th>
+                                <th>Perlu Bimbingan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Aktif menyampaikan pendapat</td>
+                                <td><input type="radio" name="aspek1" value="4"></td>
+                                <td><input type="radio" name="aspek1" value="3"></td>
+                                <td><input type="radio" name="aspek1" value="2"></td>
+                                <td><input type="radio" name="aspek1" value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Mendengarkan pendapat teman dengan saksama</td>
+                                <td><input type="radio" name="aspek2" value="4"></td>
+                                <td><input type="radio" name="aspek2" value="3"></td>
+                                <td><input type="radio" name="aspek2" value="2"></td>
+                                <td><input type="radio" name="aspek2" value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Memberikan tanggapan secara sopan dan relevan</td>
+                                <td><input type="radio" name="aspek3" value="4"></td>
+                                <td><input type="radio" name="aspek3" value="3"></td>
+                                <td><input type="radio" name="aspek3" value="2"></td>
+                                <td><input type="radio" name="aspek3" value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Menghargai perbedaan pendapat</td>
+                                <td><input type="radio" name="aspek4" value="4"></td>
+                                <td><input type="radio" name="aspek4" value="3"></td>
+                                <td><input type="radio" name="aspek4" value="2"></td>
+                                <td><input type="radio" name="aspek4" value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Berperan sesuai peran/tugas dalam kelompok</td>
+                                <td><input type="radio" name="aspek5" value="4"></td>
+                                <td><input type="radio" name="aspek5" value="3"></td>
+                                <td><input type="radio" name="aspek5" value="2"></td>
+                                <td><input type="radio" name="aspek5" value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Mendorong teman lain untuk ikut terlibat</td>
+                                <td><input type="radio" name="aspek6" value="4"></td>
+                                <td><input type="radio" name="aspek6" value="3"></td>
+                                <td><input type="radio" name="aspek6" value="2"></td>
+                                <td><input type="radio" name="aspek6" value="1"></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Menjaga suasana diskusi tetap fokus dan tertib</td>
+                                <td><input type="radio" name="aspek7" value="4"></td>
+                                <td><input type="radio" name="aspek7" value="3"></td>
+                                <td><input type="radio" name="aspek7" value="2"></td>
+                                <td><input type="radio" name="aspek7" value="1"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align: center; margin: 20px 0;">
+                    <button class="btn" onclick="calculateObservationScore()"><i class="fas fa-calculator"></i> Hitung Nilai Observasi</button>
+                </div>
+                <div id="observation-result" style="margin-top: 15px; padding: 15px; background-color: #f8f9fa; border-radius: 5px; display: none;">
+                    <h5>Hasil Observasi</h5>
+                    <p id="observation-score"></p>
+                </div>
+                
+                <h3><i class="fas fa-file-alt"></i> Latihan Soal</h3>
+                <div class="card">
+                    <p>Kerjakan soal-soal berikut untuk menguji pemahaman Anda tentang Permutasi dan Kombinasi:</p>
+                    <ol id="exercise-list">
+                        <li>Dari 10 finalis lomba menyanyi akan dipilih juara I, II dan III. Berapa banyaknya kemungkinan susunan terpilihnya sebagai juara?</li>
+                        <li>Dari enam calon pengurus osis akan dipilih tiga orang pengurus inti yaitu satu orang ketua, satu orang sekretaris, dan satu orang bendahara. Berapa banyaknya susunan yang terbentuk?</li>
+                        <li>Dari 20 orang yang berkumpul, mereka saling berjabat tangan, maka berapa banyaknya jabatan tangan yang terjadi?</li>
+                        <li>Sebuah kompetisi sepak bola diikuti oleh 6 negara. Pada babak awal setiap negara harus bertanding satu sama lain. Berapa banyaknya pertandingan pada babak awal?</li>
+                        <li>Pada suatu bidang terdapat 20 titik, dengan ketentuan tidak ada 3 titik yang terletak pada satu garis. Berapa banyaknya garis yang dapat terjadi?</li>
+                        <li>Suatu kepanitiaan yang beranggotakan 4 orang akan dipilih dari 4 pria dan 7 wanita. Bila dalam kepanitiaan tersebut disyaratkan paling sedikit 2 wanita maka berapa banyaknya cara memilih panitia tersebut?</li>
+                        <li>Sebuah kotak berisi 4 buah bola merah dan 5 bola putih akan diambil tiga buah bola. Berapa banyak cara mengambil 2 bola merah dan 1 bola putih?</li>
+                        <li>Berapa banyaknya cara memilih pemain bulu tangkis ganda putra dari delapan pemain putra?</li>
+                        <li>Dari delapan orang pemain inti, akan dibentuk sebuah team bola basket. Berapa banyaknya cara pemilihan team bola basket tersebut?</li>
+                        <li>Berapa banyak cara memasang 5 bendera dari Negara yang berbeda disusun dalam satu baris?</li>
+                    </ol>
+                    
+                    <div style="margin-top: 20px;">
+                        <button class="btn" onclick="showExerciseAnswers()"><i class="fas fa-key"></i> Lihat Kunci Jawaban</button>
+                    </div>
+                    
+                    <div id="exercise-answers" class="hidden" style="margin-top: 20px; padding: 15px; background-color: #e8f5e9; border-radius: 8px; border-left: 5px solid var(--secondary);">
+                        <h5><i class="fas fa-check-circle"></i> Kunci Jawaban Latihan Soal</h5>
+                        <ol>
+                            <li>720 cara (Permutasi: P(10,3) = 10 × 9 × 8)</li>
+                            <li>120 cara (Permutasi: P(6,3) = 6 × 5 × 4)</li>
+                            <li>190 jabat tangan (Kombinasi: C(20,2) = 190)</li>
+                            <li>15 pertandingan (Kombinasi: C(6,2) = 15)</li>
+                            <li>190 garis (Kombinasi: C(20,2) = 190)</li>
+                            <li>301 cara (Kombinasi: C(7,2)×C(4,2) + C(7,3)×C(4,1) + C(7,4))</li>
+                            <li>30 cara (Kombinasi: C(4,2) × C(5,1) = 6 × 5)</li>
+                            <li>28 cara (Kombinasi: C(8,2) = 28)</li>
+                            <li>56 cara (Kombinasi: C(8,5) = 56)</li>
+                            <li>120 cara (Permutasi: 5! = 120)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <h3>RENCANA PELAKSANAAN PEMBELAJARAN</h3>
+            <p>Mata Pelajaran: Matematika - Permutasi dan Kombinasi</p>
+            <p>Dengan Pendekatan Deep Learning: Berkesadaran, Bermakna, Menggembirakan</p>
+            
+            <div class="signature">
+                <div class="signature-box">
+                    <p>Mengetahui,</p>
+                    <p>Kepala Sekolah</p>
+                    <p><strong>MUH. TAUFIQ SALYONO, S.Pd., M.Pd.Si</strong></p>
+                    <p>NIP. 19670815 199001 1 001</p>
+                </div>
+                
+                <div class="signature-box">
+                    <p>Playen, 8 Agustus 2025</p>
+                    <p>Guru Mata Pelajaran</p>
+                    <p><strong>SARI WAHYUNINGSIH, S.Pd.Si</strong></p>
+                    <p>NIP. 19840405 201903 2 011</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
+                <p><i class="fas fa-lightbulb"></i> Modul ini mengintegrasikan pendekatan Deep Learning dengan prinsip Berkesadaran, Bermakna, dan Menggembirakan</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Tab navigation
+        function openTab(tabName) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            
+            tabContents.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            tabButtons.forEach(button => {
+                button.classList.remove('active-tab');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active-tab');
+        }
+        
+        // Learning tab navigation
+        function openLearningTab(tabName) {
+            const learningTabs = document.querySelectorAll('.learning-tab');
+            const learningTabButtons = document.querySelectorAll('#pengalaman .tab-btn');
+            
+            learningTabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            learningTabButtons.forEach(button => {
+                button.classList.remove('active-tab');
+            });
+            
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active-tab');
+        }
+        
+        // Color mixing game
+        let selectedColors = [];
+        let selectedColorNames = [];
+        
+        function showColorMixer() {
+            document.getElementById('color-mixer-container').classList.remove('hidden');
+            document.getElementById('sentence-builder-container').classList.add('hidden');
+        }
+        
+        function selectColor(element, colorName) {
+            if (selectedColors.length < 2) {
+                selectedColors.push(element.dataset.color);
+                selectedColorNames.push(colorName);
+                element.style.border = "3px solid #333";
+                document.getElementById('selected-colors').textContent = selectedColorNames.join(' dan ');
+            } else {
+                alert('Anda sudah memilih 2 warna. Klik "Campur Warna" untuk melihat hasilnya.');
+            }
+        }
+        
+        function mixColors() {
+            if (selectedColors.length !== 2) {
+                alert('Pilih 2 warna terlebih dahulu!');
+                return;
+            }
+            
+            const colorMap = {
+                'red': '#FF0000',
+                'yellow': '#FFFF00',
+                'green': '#00FF00',
+                'blue': '#0000FF',
+                'brown': '#8B4513'
+            };
+            
+            const mixResults = {
+                'red+yellow': '#FFA500', // Orange
+                'red+green': '#964B00', // Brown
+                'red+blue': '#800080', // Purple
+                'red+brown': '#8B0000', // Dark Red
+                'yellow+green': '#ADFF2F', // Green Yellow
+                'yellow+blue': '#00FFFF', // Cyan
+                'yellow+brown': '#DAA520', // Goldenrod
+                'green+blue': '#008080', // Teal
+                'green+brown': '#556B2F', // Dark Olive Green
+                'blue+brown': '#2F4F4F' // Dark Slate Gray
+            };
+            
+            const colorKey = selectedColors.sort().join('+');
+            const resultColor = mixResults[colorKey] || '#808080';
+            const resultName = getMixedColorName(selectedColorNames);
+            
+            const resultBox = document.getElementById('color-result');
+            resultBox.style.backgroundColor = resultColor;
+            resultBox.innerHTML = `<p>Hasil pencampuran ${selectedColorNames[0]} dan ${selectedColorNames[1]}</p><p>${resultName}</p>`;
+        }
+        
+        function getMixedColorName(colors) {
+            const colorPairs = {
+                'Merah,Kuning': 'Jingga (Orange)',
+                'Merah,Hijau': 'Coklat',
+                'Merah,Biru': 'Ungu',
+                'Merah,Coklat': 'Merah Tua',
+                'Kuning,Hijau': 'Hijau Kuning',
+                'Kuning,Biru': 'Cyan',
+                'Kuning,Coklat': 'Coklat Keemasan',
+                'Hijau,Biru': 'Teal',
+                'Hijau,Coklat': 'Hijau Zaitun Tua',
+                'Biru,Coklat': 'Abu-abu Tua'
+            };
+            
+            const key = colors.sort().join(',');
+            return colorPairs[key] || 'Warna Campuran';
+        }
+        
+        function resetColors() {
+            selectedColors = [];
+            selectedColorNames = [];
+            document.querySelectorAll('.color-box').forEach(box => {
+                box.style.border = 'none';
+            });
+            document.getElementById('selected-colors').textContent = 'Belum ada warna yang dipilih';
+            document.getElementById('color-result').style.backgroundColor = '#eee';
+            document.getElementById('color-result').innerHTML = 'Hasil pencampuran akan muncul di sini';
+        }
+        
+        // Sentence builder game
+        function showSentenceBuilder() {
+            document.getElementById('sentence-builder-container').classList.remove('hidden');
+            document.getElementById('color-mixer-container').classList.add('hidden');
+        }
+        
+        let selectedWords = [];
+        
+        function selectWord(element) {
+            if (!selectedWords.includes(element.dataset.word)) {
+                selectedWords.push(element.dataset.word);
+                element.style.backgroundColor = '#3498db';
+                element.style.color = 'white';
+                document.getElementById('selected-words').textContent = selectedWords.join(', ');
+            }
+        }
+        
+        function checkSentence() {
+            const sentence = document.getElementById('sentence-input').value;
+            const feedback = document.getElementById('sentence-feedback');
+            
+            if (sentence.trim() === '') {
+                feedback.innerHTML = '<p style="color: #e74c3c;">Silakan tulis kalimat terlebih dahulu!</p>';
+                return;
+            }
+            
+            // Check if all words are used
+            const usedAllWords = selectedWords.every(word => 
+                sentence.toLowerCase().includes(word.toLowerCase())
+            );
+            
+            if (usedAllWords && selectedWords.length === 4) {
+                feedback.innerHTML = '<p style="color: #2ecc71;">✅ Kalimat Anda sudah menggunakan semua kata yang disediakan!</p>';
+            } else {
+                feedback.innerHTML = `<p style="color: #e74c3c;">❌ Kalimat Anda belum menggunakan semua kata yang disediakan. Kata yang harus digunakan: ${selectedWords.join(', ')}</p>`;
+            }
+        }
+        
+        function resetSentence() {
+            selectedWords = [];
+            document.querySelectorAll('.word-box').forEach(box => {
+                box.style.backgroundColor = '';
+                box.style.color = '';
+            });
+            document.getElementById('selected-words').textContent = '';
+            document.getElementById('sentence-input').value = '';
+            document.getElementById('sentence-feedback').innerHTML = '';
+        }
+        
+        // Quiz functions
+        function checkAnswer(element, result) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+            
+            if (result === 'correct') {
+                element.classList.add('correct');
+            } else {
+                element.classList.add('incorrect');
+                // Find and highlight the correct answer
+                options.forEach(opt => {
+                    if (opt.onclick && opt.onclick.toString().includes("'correct'")) {
+                        opt.classList.add('correct');
+                    }
+                });
+            }
+        }
+        
+        function checkPermComAnswer(element, answer) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+            
+            const question = element.parentElement.querySelector('.quiz-question').textContent;
+            let correctAnswer = '';
+            
+            if (question.includes('juara I, II, dan III')) {
+                correctAnswer = 'permutasi';
+            } else if (question.includes('pengurus OSIS')) {
+                correctAnswer = 'kombinasi';
+            }
+            
+            if (answer === correctAnswer) {
+                element.classList.add('correct');
+            } else {
+                element.classList.add('incorrect');
+                // Highlight the correct answer
+                options.forEach(opt => {
+                    if (opt.onclick && opt.onclick.toString().includes(`'${correctAnswer}'`)) {
+                        opt.classList.add('correct');
+                    }
+                });
+            }
+            
+            const feedback = document.getElementById('perm-com-feedback');
+            if (question.includes('juara I, II, dan III')) {
+                feedback.innerHTML = `<p><strong>Penjelasan:</strong> Ini adalah <strong>permutasi</strong> karena urutan juara (I, II, III) diperhitungkan. Juara I, II, III dari A,B,C berbeda dengan B,A,C.</p>`;
+            } else {
+                feedback.innerHTML = `<p><strong>Penjelasan:</strong> Ini adalah <strong>kombinasi</strong> karena yang dipilih hanya 3 orang sebagai pengurus tanpa memperhatikan urutan/jabatan tertentu.</p>`;
+            }
+        }
+        
+        function showMotivation() {
+            const motivationExample = document.getElementById('motivation-example');
+            motivationExample.classList.toggle('hidden');
+        }
+        
+        // Kahoot game
+        let kahootQuestion = 1;
+        
+        function showKahootGame() {
+            document.getElementById('kahoot-game').classList.remove('hidden');
+        }
+        
+        function checkKahootAnswer(element, result) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+            
+            const feedback = document.getElementById('kahoot-feedback');
+            
+            if (result === 'correct') {
+                element.classList.add('correct');
+                feedback.innerHTML = '<p style="color: #2ecc71;">✅ Benar! Ini adalah kombinasi karena memilih 3 orang tanpa memperhatikan urutan: C(7,3) = 35 cara.</p>';
+            } else {
+                element.classList.add('incorrect');
+                feedback.innerHTML = '<p style="color: #e74c3c;">❌ Belum tepat. Ingat, memilih wakil tanpa urutan adalah kombinasi, bukan permutasi.</p>';
+            }
+        }
+        
+        function nextKahootQuestion() {
+            const gameContainer = document.getElementById('kahoot-game');
+            const feedback = document.getElementById('kahoot-feedback');
+            
+            if (kahootQuestion === 1) {
+                gameContainer.innerHTML = `
+                    <div class="card">
+                        <h6><i class="fas fa-trophy"></i> Game Kahoot: Permutasi & Kombinasi</h6>
+                        <div class="quiz-container">
+                            <div class="quiz-question">Berapa banyak kata yang dapat disusun dari huruf-huruf pada kata "MATEMATIKA"?</div>
+                            <div class="quiz-option" onclick="checkKahootAnswer2(this, 'incorrect')">10! = 3.628.800</div>
+                            <div class="quiz-option" onclick="checkKahootAnswer2(this, 'incorrect')">10!/3! = 604.800</div>
+                            <div class="quiz-option" onclick="checkKahootAnswer2(this, 'correct')">10!/(3!2!2!) = 151.200</div>
+                            <div class="quiz-option" onclick="checkKahootAnswer2(this, 'incorrect')">10!/(3!2!) = 302.400</div>
+                        </div>
+                        <div id="kahoot-feedback" style="margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
+                        <div style="text-align: center; margin-top: 15px;">
+                            <button class="btn" onclick="finishKahootGame()">Selesai <i class="fas fa-flag-checkered"></i></button>
+                        </div>
+                    </div>
+                `;
+                kahootQuestion = 2;
+            }
+        }
+        
+        function checkKahootAnswer2(element, result) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            options.forEach(opt => {
+                opt.classList.remove('correct', 'incorrect');
+                opt.style.pointerEvents = 'none';
+            });
+            
+            const feedback = document.getElementById('kahoot-feedback');
+            
+            if (result === 'correct') {
+                element.classList.add('correct');
+                feedback.innerHTML = '<p style="color: #2ecc71;">✅ Benar! Kata "MATEMATIKA" memiliki 10 huruf dengan M(2), A(3), T(2), E(1), I(1), K(1). Jadi banyak susunan = 10!/(3!2!2!) = 151.200.</p>';
+            } else {
+                element.classList.add('incorrect');
+                feedback.innerHTML = '<p style="color: #e74c3c;">❌ Belum tepat. Perhatikan ada huruf yang berulang: M(2), A(3), T(2).</p>';
+            }
+        }
+        
+        function finishKahootGame() {
+            document.getElementById('kahoot-game').innerHTML = `
+                <div class="card">
+                    <h6><i class="fas fa-trophy"></i> Game Kahoot Selesai!</h6>
+                    <p>Selamat! Anda telah menyelesaikan game Kahoot tentang Permutasi dan Kombinasi.</p>
+                    <p>Terus berlatih untuk meningkatkan pemahaman Anda!</p>
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button class="btn" onclick="showKahootGame()"><i class="fas fa-redo"></i> Main Lagi</button>
+                    </div>
+                </div>
+            `;
+            kahootQuestion = 1;
+        }
+        
+        // Reflection function
+        function recordReflection(feeling) {
+            const reflectionResult = document.getElementById('reflection-result');
+            reflectionResult.innerHTML = `
+                <p><strong>Refleksi Anda:</strong> ${feeling}</p>
+                <p>Terima kasih telah berbagi perasaan Anda. Refleksi membantu guru memahami pengalaman belajar Anda dan meningkatkan kualitas pembelajaran.</p>
+            `;
+        }
+        
+        // Observation score calculation
+        function calculateObservationScore() {
+            let totalScore = 0;
+            let answeredQuestions = 0;
+            
+            for (let i = 1; i <= 7; i++) {
+                const selectedValue = document.querySelector(`input[name="aspek${i}"]:checked`);
+                if (selectedValue) {
+                    totalScore += parseInt(selectedValue.value);
+                    answeredQuestions++;
+                }
+            }
+            
+            const resultDiv = document.getElementById('observation-result');
+            const scoreText = document.getElementById('observation-score');
+            
+            if (answeredQuestions === 7) {
+                const averageScore = (totalScore / 7).toFixed(2);
+                let interpretation = '';
+                
+                if (averageScore >= 3.5) {
+                    interpretation = '<strong>Sangat Baik:</strong> Siswa aktif berkontribusi dalam diskusi.';
+                } else if (averageScore >= 2.5) {
+                    interpretation = '<strong>Baik:</strong> Siswa cukup aktif dalam diskusi.';
+                } else if (averageScore >= 1.5) {
+                    interpretation = '<strong>Cukup:</strong> Siswa perlu lebih aktif dalam diskusi.';
+                } else {
+                    interpretation = '<strong>Perlu Bimbingan:</strong> Siswa memerlukan pendampingan lebih dalam diskusi.';
+                }
+                
+                scoreText.innerHTML = `
+                    <p>Total Skor: ${totalScore} dari 28</p>
+                    <p>Rata-rata: ${averageScore}</p>
+                    <p>Interpretasi: ${interpretation}</p>
+                `;
+                resultDiv.style.display = 'block';
+            } else {
+                alert('Harap beri penilaian untuk semua aspek observasi!');
+            }
+        }
+        
+        // Exercise answers
+        function showExerciseAnswers() {
+            const answersDiv = document.getElementById('exercise-answers');
+            answersDiv.classList.toggle('hidden');
+        }
+        
+        // Initialize word boxes for sentence builder
+        document.addEventListener('DOMContentLoaded', function() {
+            const wordBoxes = document.querySelectorAll('.word-box');
+            wordBoxes.forEach(box => {
+                box.style.padding = '10px 15px';
+                box.style.backgroundColor = '#e9ecef';
+                box.style.borderRadius = '5px';
+                box.style.cursor = 'pointer';
+                box.style.transition = 'background-color 0.3s';
+            });
+        });
+    </script>
+</body>
+</html>
+    
+    <script>
+        console.log('Media Pembelajaran Interaktif');
+    </script>
+</body>
+</html>
